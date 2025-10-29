@@ -55,7 +55,6 @@
         </div>
 
         <script>
-            // Встановлюємо тему при завантаженні сторінки згідно з системною
             const html = document.documentElement;
 
             function applySystemTheme() {
@@ -69,10 +68,8 @@
                 }
             }
 
-            // Застосовуємо тему при завантаженні
             applySystemTheme();
 
-            // Додаємо слухача на зміну системної теми в реальному часі
             if (window.matchMedia) {
                 window
                     .matchMedia("(prefers-color-scheme: dark)")
@@ -81,7 +78,6 @@
                     });
             }
 
-            // Обробник кнопки перемикання теми вручну
             const toggleBtn = document.getElementById("toggleTheme");
             toggleBtn.addEventListener("click", () => {
                 html.dataset.theme =
